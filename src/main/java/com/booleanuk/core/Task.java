@@ -17,5 +17,7 @@ public class Task {
         return this.isComplete;
     }
 
-
+    public void changeStatus() {
+        this.isComplete = !this.isComplete;
+    }
 }
