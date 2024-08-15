@@ -56,6 +56,11 @@ class TodoListTest {
         Task t2 = new Task("Second Task");
         Task t3 = new Task("Third Task");
 
+        //Add tasks to todolist
+        todoList.add(t1);
+        todoList.add(t2);
+        todoList.add(t3);
+
         //Change the status of tasks and populate a reference list to compare
         todoList.changeTaskStatus(t1);
         todoList.changeTaskStatus(t3);

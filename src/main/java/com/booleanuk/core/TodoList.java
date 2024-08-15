@@ -26,4 +26,12 @@ public class TodoList {
     public void changeTaskStatus(Task task) {
         task.changeStatus();
     }
+
+    public ArrayList<Task> getComplete() {
+        ArrayList<Task> completed = new ArrayList<>();
+        for (Task task: this.todoList) {
+            if(task.isComplete) completed.add(task);
+        }
+        return completed;
+    }
 }
