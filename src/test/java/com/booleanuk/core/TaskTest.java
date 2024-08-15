@@ -16,17 +16,17 @@ public class TaskTest {
     public void getTaskStatusTest() {
         Task task = new Task("First Task");
 
-        Assertions.assertEquals(false, task.getTaskStatus());
+        Assertions.assertFalse(task.getTaskStatus());
     }
 
     @Test
     public void changeStatusTest() {
         Task task = new Task("First Task");
 
-        Assertions.assertEquals(false, task.getTaskStatus());
+        Assertions.assertFalse(task.getTaskStatus());
 
         task.changeStatus();
 
-        Assertions.assertEquals(true, task.getTaskStatus());
+        Assertions.assertTrue(task.getTaskStatus());
     }
 }
