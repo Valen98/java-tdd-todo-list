@@ -37,12 +37,31 @@ class TodoListTest {
     public void changeTaskStatusTest() {
         TodoList todoList = new TodoList();
         Task t1 = new Task("First Task");
-        Task t2 = new Task("Second Task");
 
+        //False in the beginning
         Assertions.assertFalse(t1.getTaskStatus());
 
+        //Change the isComplete to true
         todoList.changeTaskStatus(t1);
 
+        //isComplete is now true
         Assertions.assertTrue(t1.getTaskStatus());
+    }
+
+    @Test
+    public void getCompletedTasksTest() {
+        TodoList todoList = new TodoList();
+        ArrayList<Task> listChecker = new ArrayList<>();
+        Task t1 = new Task("First Task");
+        Task t2 = new Task("Second Task");
+        Task t3 = new Task("Third Task");
+
+        //Change the status of tasks and populate a reference list to compare
+        todoList.changeTaskStatus(t1);
+        todoList.changeTaskStatus(t3);
+        listChecker.add(t1);
+        listChecker.add(t3);
+
+        Assertions.assertEquals(listChecker, todoList.getComplete());
     }
 }
