@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 class TodoListTest {
 
     @Test
-    public void viewTaskList(){
+    public void addTaskToList(){
         TodoList todoList = new TodoList();
         Task t1 = new Task("First Task");
 
