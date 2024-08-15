@@ -34,4 +34,11 @@ public class TodoList {
         }
         return completed;
     }
+    public ArrayList<Task> getInComplete() {
+        ArrayList<Task> completed = new ArrayList<>();
+        for (Task task: this.todoList) {
+            if(!task.isComplete) completed.add(task);
+        }
+        return completed;
+    }
 }
