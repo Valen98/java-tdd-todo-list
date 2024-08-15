@@ -104,6 +104,6 @@ class TodoListTest {
         todoList.add(t2);
         todoList.add(t3);
 
-        Assertions.assertTrue(todoList.searchTask("First Task"));
+        Assertions.assertEquals(todoList.searchTask("First Task"), t1);
     }
 }

@@ -41,4 +41,13 @@ public class TodoList {
         }
         return completed;
     }
+
+    public Task searchTask(String name) {
+        for (Task task: this.todoList) {
+            if(task.getName() == name) {
+                return task;
+            }
+        }
+        return null;
+    }
 }
