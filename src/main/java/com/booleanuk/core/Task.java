@@ -12,4 +12,8 @@ public class Task {
     public String getName() {
         return this.name;
     }
+
+    public boolean getTaskStatus() {
+        return this.isComplete;
+    }
 }

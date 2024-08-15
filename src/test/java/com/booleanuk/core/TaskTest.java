@@ -16,6 +16,6 @@ public class TaskTest {
     public void getTaskStatus() {
         Task task = new Task("First Task");
 
-        Assertions.assertEquals(true, task.getTaskStatus());
+        Assertions.assertEquals(false, task.getTaskStatus());
     }
 }
