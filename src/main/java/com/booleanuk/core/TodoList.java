@@ -1,6 +1,7 @@
 package com.booleanuk.core;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class TodoList {
 
@@ -53,5 +54,9 @@ public class TodoList {
 
     public void removeTask(Task inputTask) {
         this.todoList.removeIf(task -> inputTask.getName().equals(task.getName()));
+    }
+
+    public void sortAscending() {
+        this.todoList.sort((Comparator.comparing(Task::getName)));
     }
 }
