@@ -42,5 +42,7 @@ class TodoListTest {
         Assertions.assertFalse(t1.getTaskStatus());
 
         todoList.changeTaskStatus(t1);
+
+        Assertions.assertTrue(t1.getTaskStatus());
     }
 }

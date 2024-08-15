@@ -22,4 +22,8 @@ public class TodoList {
     public ArrayList<Task> viewList() {
         return this.todoList;
     }
+
+    public void changeTaskStatus(Task task) {
+        task.changeStatus();
+    }
 }
