@@ -11,6 +11,6 @@ class TodoListTest {
         Task t1 = new Task("First Task");
 
         Assertions.assertTrue(todoList.add(t1));
-        Assertions.assertTrue(todoList.add(t1));
+        Assertions.assertFalse(todoList.add(t1));
     }
 }
