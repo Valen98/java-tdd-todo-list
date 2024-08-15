@@ -160,4 +160,35 @@ class TodoListTest {
         Assertions.assertNotEquals(todoList.viewList(), checkerList);
 
     }
+
+    @Test
+    public void viewListDescendingTest(){
+        TodoList todoList = new TodoList();
+        ArrayList<Task> checkerList = new ArrayList<>();
+        Task t1 = new Task("aaa");
+        Task t2 = new Task("ccc");
+        Task t3 = new Task("bbb");
+
+        //Add tasks to todolist
+        todoList.add(t1);
+        todoList.add(t2);
+        todoList.add(t3);
+        checkerList.add(t1);
+        checkerList.add(t2);
+        checkerList.add(t3);
+
+        for (Task task : todoList.viewList()) {
+            System.out.println(task.getName() + "\n");
+        }
+        Assertions.assertEquals(todoList.viewList(), checkerList);
+
+        System.out.println("Change order");
+        todoList.sortDescending();
+        for (Task task : todoList.viewList()) {
+            System.out.println(task.getName() + "\n");
+        }
+        //This is after sorting the list and should not be equal anymore
+        Assertions.assertNotEquals(todoList.viewList(), checkerList);
+
+    }
 }
