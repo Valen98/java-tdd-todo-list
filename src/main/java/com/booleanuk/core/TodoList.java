@@ -18,4 +18,8 @@ public class TodoList {
             return true;
         }
     }
+
+    public ArrayList<Task> viewList() {
+        return this.todoList;
+    }
 }
