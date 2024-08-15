@@ -7,8 +7,8 @@ public class TaskTest {
 
     @Test
     public void createTaskTest() {
-        Task task = new Task();
+        Task task = new Task("First Task");
 
-        Assertions.assertEquals("First Task", task.getName(task));
+        Assertions.assertEquals("First Task", task.getName());
     }
 }
