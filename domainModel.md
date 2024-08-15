@@ -39,5 +39,7 @@
 |          |                               |                           |                                           | "Task with 'name' does not exist"                      |
 |          |                               | getTaskStatus()           | Get task status from task                 | "Complete"/ "Incomplete"                               |
 |          |                               |                           |                                           | "Task does not exist"                                  |
+|          |                               | changeStatus()            | Change the current status of task         | isComplete: false -> true                              |
+|          |                               |                           |                                           | isComplete: true -> false                              |
 
 

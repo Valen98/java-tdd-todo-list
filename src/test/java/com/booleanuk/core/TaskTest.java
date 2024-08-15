@@ -13,9 +13,20 @@ public class TaskTest {
     }
 
     @Test
-    public void getTaskStatus() {
+    public void getTaskStatusTest() {
         Task task = new Task("First Task");
 
         Assertions.assertEquals(false, task.getTaskStatus());
+    }
+
+    @Test
+    public void changeStatusTest() {
+        Task task = new Task("First Task");
+
+        Assertions.assertEquals(false, task.getTaskStatus());
+
+        task.changeStatus();
+
+        Assertions.assertEquals(true, task.getTaskStatus());
     }
 }
