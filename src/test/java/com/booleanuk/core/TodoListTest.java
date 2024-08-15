@@ -9,5 +9,6 @@ class TodoListTest {
         String hello = "Hello";
         Assertions.assertEquals("Hello", hello);
         Assertions.assertNotEquals("Goodbye", hello);
+
     }
 }
