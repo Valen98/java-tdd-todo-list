@@ -91,4 +91,19 @@ class TodoListTest {
 
         Assertions.assertEquals(listChecker, todoList.getInComplete());
     }
+
+    @Test
+    public void searchTaskTest() {
+        TodoList todoList = new TodoList();
+        Task t1 = new Task("First Task");
+        Task t2 = new Task("Second Task");
+        Task t3 = new Task("Third Task");
+
+        //Add tasks to todolist
+        todoList.add(t1);
+        todoList.add(t2);
+        todoList.add(t3);
+
+        Assertions.assertTrue(todoList.searchTask("First Task"));
+    }
 }
