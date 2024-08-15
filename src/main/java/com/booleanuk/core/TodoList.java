@@ -50,4 +50,8 @@ public class TodoList {
         }
         return null;
     }
+
+    public void removeTask(Task inputTask) {
+        this.todoList.removeIf(task -> inputTask.getName().equals(task.getName()));
+    }
 }
