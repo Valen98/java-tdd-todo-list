@@ -27,7 +27,7 @@
 |          |                               |                          |                                           | "All tasks are completed"                              |
 |          |                               | searchTasks(String name) | Get task with input name                  | "Task - in/complete"                                   |
 |          |                               |                          |                                           | "Task with name 'name' does not exist"                 |
-|          |                               | Remove(String name)      | Remove specific task with the name 'name' | "Task 'name' is removed"                               |
+|          |                               | removeTask(Task task)    | Remove specific task with the name 'name' | "Task 'name' is removed"                               |
 |          |                               |                          |                                           | "Task 'name' does not exist and therefore not deleted" |
 |          |                               | viewListAscending        | Get all tasks in Ascending order of name  | task1, task2, task3...                                 |
 |          |                               |                          |                                           | "Task list is empty"                                   |
