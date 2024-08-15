@@ -59,4 +59,8 @@ public class TodoList {
     public void sortAscending() {
         this.todoList.sort((Comparator.comparing(Task::getName)));
     }
+
+    public void sortDescending() {
+        this.todoList.sort((Comparator.comparing(Task::getName)).reversed());
+    }
 }

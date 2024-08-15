@@ -177,16 +177,23 @@ class TodoListTest {
         checkerList.add(t2);
         checkerList.add(t3);
 
+        /*
+        For debugging printing out the list
         for (Task task : todoList.viewList()) {
             System.out.println(task.getName() + "\n");
         }
+        */
+
         Assertions.assertEquals(todoList.viewList(), checkerList);
 
         System.out.println("Change order");
         todoList.sortDescending();
+        /*
+        For debugging printing out the list
         for (Task task : todoList.viewList()) {
             System.out.println(task.getName() + "\n");
         }
+        */
         //This is after sorting the list and should not be equal anymore
         Assertions.assertNotEquals(todoList.viewList(), checkerList);
 
