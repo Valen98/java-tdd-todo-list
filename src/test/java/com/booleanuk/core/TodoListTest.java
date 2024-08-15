@@ -69,4 +69,26 @@ class TodoListTest {
 
         Assertions.assertEquals(listChecker, todoList.getComplete());
     }
+
+    @Test
+    public void getInCompletedTasksTest() {
+        TodoList todoList = new TodoList();
+        ArrayList<Task> listChecker = new ArrayList<>();
+        Task t1 = new Task("First Task");
+        Task t2 = new Task("Second Task");
+        Task t3 = new Task("Third Task");
+
+        //Add tasks to todolist
+        todoList.add(t1);
+        todoList.add(t2);
+        todoList.add(t3);
+
+        //Change the status of tasks and populate a reference list to compare
+        todoList.changeTaskStatus(t1);
+        todoList.changeTaskStatus(t3);
+        listChecker.add(t2);
+
+
+        Assertions.assertEquals(listChecker, todoList.getInComplete());
+    }
 }
