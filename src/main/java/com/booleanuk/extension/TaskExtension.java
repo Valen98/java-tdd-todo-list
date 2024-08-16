@@ -32,4 +32,8 @@ public class TaskExtension {
     public void changeStatus() {
         this.isComplete = !this.isComplete;
     }
+
+    public void updateName(String newName) {
+        this.name = newName;
+    }
 }

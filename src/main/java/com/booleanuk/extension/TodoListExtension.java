@@ -22,4 +22,9 @@ public class TodoListExtension {
     public TaskExtension getTaskById(int id) {
         return this.todoList.get(id);
     }
+
+    public void updateTaskName(int id, String newName) {
+            TaskExtension updateTask = this.todoList.get(id);
+            updateTask.updateName(newName);
+    }
 }
