@@ -19,7 +19,10 @@ public class TodoListExtensionTest {
         TodoListExtension todoList = new TodoListExtension();
 
         Assertions.assertTrue(todoList.add("First Task"));
+        todoList.add("Second Task");
+        todoList.add("Third Task");
 
         Assertions.assertEquals("First Task", todoList.getTaskById(0).getName());
+        Assertions.assertNotEquals("Third Task", todoList.getTaskById(0).getName());
     }
 }

@@ -18,4 +18,8 @@ public class TodoListExtension {
     public ArrayList<TaskExtension> viewTodos() {
         return this.todoList;
     }
+
+    public TaskExtension getTaskById(int id) {
+        return this.todoList.get(id);
+    }
 }
