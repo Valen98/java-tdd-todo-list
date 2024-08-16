@@ -35,4 +35,14 @@ public class TodoListExtensionTest {
         todoList.updateTaskName(0, "Updated Task");
         Assertions.assertEquals("Updated Task", todoList.getTaskById(0).getName());
     }
+
+    @Test
+    public void changeStatusTest() {
+        TodoListExtension todoList = new TodoListExtension();
+
+        todoList.add("First Task");
+        Assertions.assertFalse(todoList.getTaskById(0).getTaskStatus());
+        todoList.getTaskById(0).changeStatus();
+        Assertions.assertFalse(todoList.getTaskById(0).getTaskStatus());
+    }
 }
