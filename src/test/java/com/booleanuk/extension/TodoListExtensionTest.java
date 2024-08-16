@@ -14,4 +14,12 @@ public class TodoListExtensionTest {
         Assertions.assertTrue(todoList.add("First Task"));
     }
 
+    @Test
+    public void getTaskByIdTest() {
+        TodoListExtension todoList = new TodoListExtension();
+
+        Assertions.assertTrue(todoList.add("First Task"));
+
+        Assertions.assertEquals("First Task", todoList.getTaskById(0).getName());
+    }
 }
