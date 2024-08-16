@@ -25,4 +25,14 @@ public class TodoListExtensionTest {
         Assertions.assertEquals("First Task", todoList.getTaskById(0).getName());
         Assertions.assertNotEquals("Third Task", todoList.getTaskById(0).getName());
     }
+
+    @Test
+    public void updateTaskTest() {
+        TodoListExtension todoList = new TodoListExtension();
+
+        todoList.add("First Task");
+        Assertions.assertEquals("First Task", todoList.getTaskById(0).getName());
+        todoList.updateTaskName(0, "Updated Task");
+        Assertions.assertEquals("Updated Task", todoList.getTaskById(0).getName());
+    }
 }
