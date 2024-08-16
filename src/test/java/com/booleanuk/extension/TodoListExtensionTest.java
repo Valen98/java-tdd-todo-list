@@ -43,6 +43,6 @@ public class TodoListExtensionTest {
         todoList.add("First Task");
         Assertions.assertFalse(todoList.getTaskById(0).getTaskStatus());
         todoList.getTaskById(0).changeStatus();
-        Assertions.assertFalse(todoList.getTaskById(0).getTaskStatus());
+        Assertions.assertTrue(todoList.getTaskById(0).getTaskStatus());
     }
 }
