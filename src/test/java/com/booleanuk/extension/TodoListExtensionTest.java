@@ -5,6 +5,8 @@ import com.booleanuk.core.TodoList;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalDateTime;
+
 public class TodoListExtensionTest {
     @Test
     public void addTaskToList(){
@@ -44,5 +46,15 @@ public class TodoListExtensionTest {
         Assertions.assertFalse(todoList.getTaskById(0).getTaskStatus());
         todoList.getTaskById(0).changeStatus();
         Assertions.assertTrue(todoList.getTaskById(0).getTaskStatus());
+    }
+
+    @Test
+    public void getDateTask() {
+        TodoListExtension todoList = new TodoListExtension();
+        LocalDateTime today = LocalDateTime.now();
+
+        todoList.add("First Task");
+
+        Assertions.assertEquals(today.toString(), todoList.getTaskById(0).getDateString());
     }
 }
