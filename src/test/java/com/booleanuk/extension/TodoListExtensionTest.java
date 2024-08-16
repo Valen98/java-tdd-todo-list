@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class TodoListExtensionTest {
     @Test
@@ -53,8 +54,11 @@ public class TodoListExtensionTest {
         TodoListExtension todoList = new TodoListExtension();
         LocalDateTime today = LocalDateTime.now();
 
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+        String formattedDay = LocalDateTime.now().format(formatter);
+
         todoList.add("First Task");
 
-        Assertions.assertEquals(today.toString(), todoList.getTaskById(0).getDateString());
+        Assertions.assertEquals(formattedDay, todoList.getTaskById(0).getDateString());
     }
 }
